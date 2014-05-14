@@ -8,7 +8,7 @@ jobs:
     packages:
       - type: debian
         name: libav-tools
-        version: 4:0.8.11
+        version: 4:0.9.13
         depends:
           - "libavcodec53 (>= 4:0.8.10-0ubuntu0.12.04.1) | libavcodec-extra-53 (>= 4:0.8.10)"
           - "libavcodec53 (<< 4:0.8.10-99) | libavcodec-extra-53 (<< 4:0.8.10.99)"
