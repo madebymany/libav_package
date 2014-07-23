@@ -28,4 +28,4 @@ jobs:
           - "libswscale2 (<< 4:0.8.14) | libswscale-extra-2 (<< 4:0.8.14)"
         target: install
         repos:
-          - mxm
+          - mxm-public
