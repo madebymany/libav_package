@@ -20,7 +20,7 @@ jobs:
           - "libavformat53 (<< 4:0.8.16) | libavformat-extra-53 (<< 4:0.8.16)"
           - "libavutil51 (>= 4:0.8.10-0ubuntu0.12.04.1) | libavutil-extra-51 (>= 4:0.8.10)"
           - "libavutil51 (<< 4:0.8.16) | libavutil-extra-51 (<< 4:0.8.16)"
-          - "libc6 (>= 2.16)"
+          - "libc6 (>= 2.15)"
           - "libpostproc52 (>= 4:0.8.10-0ubuntu0.12.04.1) | libpostproc-extra-52 (>= 4:0.8.10)"
           - "libpostproc52 (<< 4:0.8.16) | libpostproc-extra-52 (<< 4:0.8.16)"
           - "libsdl1.2debian (>= 1.2.10-1)"
