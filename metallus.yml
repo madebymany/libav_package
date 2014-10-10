@@ -5,27 +5,13 @@ jobs:
     builder: "make"
     base: "ubuntu:12.04"
     software_groups: *software
+    build_depends:
+      - yasm
+      - pkg-config
     packages:
       - type: debian
         name: libav-tools
-        version: 4:0.9.13-4
-        depends:
-          - "libavcodec53 (>= 4:0.8.10-0ubuntu0.12.04.1) | libavcodec-extra-53 (>= 4:0.8.10)"
-          - "libavcodec53 (<< 4:0.8.16) | libavcodec-extra-53 (<< 4:0.8.16)"
-          - "libavdevice53 (>= 4:0.8.10-0ubuntu0.12.04.1) | libavdevice-extra-53 (>= 4:0.8.10)"
-          - "libavdevice53 (<< 4:0.8.16) | libavdevice-extra-53 (<< 4:0.8.16)"
-          - "libavfilter2 (>= 4:0.8.10-0ubuntu0.12.04.1) | libavfilter-extra-2 (>= 4:0.8.10)"
-          - "libavfilter2 (<< 4:0.8.16) | libavfilter-extra-2 (<< 4:0.8.16)"
-          - "libavformat53 (>= 4:0.8.10-0ubuntu0.12.04.1) | libavformat-extra-53 (>= 4:0.8.10)"
-          - "libavformat53 (<< 4:0.8.16) | libavformat-extra-53 (<< 4:0.8.16)"
-          - "libavutil51 (>= 4:0.8.10-0ubuntu0.12.04.1) | libavutil-extra-51 (>= 4:0.8.10)"
-          - "libavutil51 (<< 4:0.8.16) | libavutil-extra-51 (<< 4:0.8.16)"
-          - "libc6 (>= 2.15)"
-          - "libpostproc52 (>= 4:0.8.10-0ubuntu0.12.04.1) | libpostproc-extra-52 (>= 4:0.8.10)"
-          - "libpostproc52 (<< 4:0.8.16) | libpostproc-extra-52 (<< 4:0.8.16)"
-          - "libsdl1.2debian (>= 1.2.10-1)"
-          - "libswscale2 (>= 4:0.8.10-0ubuntu0.12.04.1) | libswscale-extra-2 (>= 4:0.8.10)"
-          - "libswscale2 (<< 4:0.8.16) | libswscale-extra-2 (<< 4:0.8.16)"
+        version: 4:0.11-1
         target: install
         repos:
           - mxm-public

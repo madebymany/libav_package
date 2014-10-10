@@ -1,22 +1,19 @@
-VERSION:=9.13
-EXTRACT_DIR:=libav-$(VERSION)
-SOURCE_TARBALL:=$(EXTRACT_DIR).tar.gz
-SOURCE_URL:=https://libav.org/releases/$(SOURCE_TARBALL)
+VERSION:=11
+SOURCE:=libav-$(VERSION)
+TARBALL:=$(SOURCE).tar.gz
+SOURCE_URL:=https://libav.org/releases/$(TARBALL)
 
-all: apt get-src build
+all: $(SOURCE) build
 
-apt:
-	apt-get update -qq
-	apt-get install -y curl
-	apt-get build-dep -y libav-tools
+$(SOURCE): $(TARBALL)
+	tar -xvzf $(TARBALL)
 
-get-src:
-	curl -O $(SOURCE_URL)
-	tar -xvzf $(SOURCE_TARBALL)
+$(TARBALL):
+	curl -SLo $(TARBALL) $(SOURCE_URL)
 
 build:
-	cd $(EXTRACT_DIR) && sh configure
-	cd $(EXTRACT_DIR) && $(MAKE)
+	cd $(SOURCE) && sh configure
+	cd $(SOURCE) && $(MAKE)
 
 install:
-	cd $(EXTRACT_DIR) && $(MAKE) install
+	cd $(SOURCE) && $(MAKE) install
