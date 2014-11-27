@@ -1,17 +1,19 @@
-software_groups: &software
-  - "base"
+packages:
+  branch_codenames:
+    master: trusty-unstable
+    production: trusty-stable
+
 jobs:
   default:
     builder: "make"
-    base: "ubuntu:12.04"
-    software_groups: *software
+    base: "quay.io/madebymany/build-bases:trusty"
     build_depends:
       - yasm
       - pkg-config
     packages:
       - type: debian
         name: libav-tools
-        version: 4:0.11-1
+        version: 4:0.11-2
         target: install
         repos:
           - mxm-public
