@@ -13,7 +13,7 @@ jobs:
     packages:
       - type: debian
         name: libav-tools
-        version: 4:0.11-2
+        version: 7:3.3.4-2
         target: install
         repos:
           - mxm-public
