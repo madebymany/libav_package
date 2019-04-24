@@ -1,12 +1,12 @@
 packages:
   branch_codenames:
-    master: trusty-unstable
-    production: trusty-stable
+    master: bionic-unstable
+    production: bionic-stable
 
 jobs:
   default:
     builder: "make"
-    base: "quay.io/madebymany/build-bases:trusty"
+    base: "quay.io/madebymany/build-bases:bionic"
     build_depends:
       - yasm
       - pkg-config
