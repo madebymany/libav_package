@@ -1,4 +1,4 @@
-VERSION:=11
+VERSION:=12
 SOURCE:=libav-$(VERSION)
 TARBALL:=$(SOURCE).tar.gz
 SOURCE_URL:=https://libav.org/releases/$(TARBALL)
